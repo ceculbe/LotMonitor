@@ -15,7 +15,7 @@ function LoadFile() {
         strContents = strContents.replace("\r", "");
     var lineArray = strContents.split("\n");
     var dataArray = lineArray[0].split(",");
-    alert("Data" + dataArray);
+    alert("Data" + dataArray[0] + "--"+dataArray[1] + "--" + dataArray[2]);
     // DEBUG: this code will show all lines in an alert box
     //for (var i = 0; i < lineArray.length; i++) {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
