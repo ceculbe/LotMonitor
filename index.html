@@ -2,8 +2,9 @@
 <html>
 
 <body>
-<iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
-This is HTML body text.
+    <iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
+    <p id="debug1">debug text</p>
+    <p id="debug2">debug text</p>
 
 <script type="text/javascript">
 var dataArray;
@@ -15,7 +16,8 @@ function LoadFile() {
         strContents = strContents.replace("\r", "");
     var lineArray = strContents.split("\n");
     var dataArray = lineArray[0].split(",");
-    alert("Data" + dataArray[0] + "--"+dataArray[1] + "--" + dataArray[2]);
+    document.getElementById("debug1").innerHTML = "Array=" + lineArray;
+    document.getElementById("debug2").innerHTML = "Data=" + dataArray[0] + "--"+dataArray[1] + "--" + dataArray[2];
     // DEBUG: this code will show all lines in an alert box
     //for (var i = 0; i < lineArray.length; i++) {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
