@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+<iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
+This is HTML body text.
+
+<script type="text/javascript">
+
+function LoadFile() {
+    var datafile = document.getElementById("diskFile");
+    var strRawContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strRawContents.indexOf("\r") >= 0)
+        strRawContents = strRawContents.replace("\r", "");
+    var arrLines = strRawContents.split("\n");
+    alert("File " + datafile.src + " has " + arrLines.length + " lines");
+    for (var i = 0; i < arrLines.length; i++) {
+        var curLine = arrLines[i];
+        alert("Line #" + (i + 1) + " is: '" + curLine + "'");
+    }
+}
+</script>
+
+</body>
+
+</html>
