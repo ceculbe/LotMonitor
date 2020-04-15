@@ -16,8 +16,8 @@ function LoadFile() {
         strContents = strContents.replace("\r", "");
     var lineArray = strContents.split("\n");
     var dataArray = lineArray[0].split(",");
-    document.getElementById("debug1").innerHTML = "Array=" + lineArray;
-    document.getElementById("debug2").innerHTML = "Data=" + dataArray[0] + "--"+dataArray[1] + "--" + dataArray[2];
+    document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + lineArray.length;
+    document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--"+dataArray[1] + "--" + dataArray[2]+"--";
     // DEBUG: this code will show all lines in an alert box
     //for (var i = 0; i < lineArray.length; i++) {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
