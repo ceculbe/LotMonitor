@@ -5,6 +5,7 @@
     <iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
     <p id="debug1">debug text</p>
     <p id="debug2">debug text</p>
+    <p id="debug3">debug text</p>
 
 <script type="text/javascript">
 var dataArray;
@@ -18,6 +19,13 @@ function LoadFile() {
     var dataArray = lineArray[0].split(",");
     document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + dataArray.length;
     document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--"+dataArray[1] + "--" + dataArray[2]+"--";
+    var answer;
+    if(dataArray[0] == 1){
+        answer = "Yes.";
+    } else {
+        answer = "No.";
+    }
+    document.getElementById("debug3").innerHTML = "Is the first data item a 1? " + answer;
     // DEBUG: this code will show all lines in an alert box
     //for (var i = 0; i < lineArray.length; i++) {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
