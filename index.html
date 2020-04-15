@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-
 <body>
 <iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
 This is HTML body text.
 
 <script type="text/javascript">
+var dataArray;
 
 function LoadFile() {
     var datafile = document.getElementById("diskFile");
-    var strRawContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
-    while (strRawContents.indexOf("\r") >= 0)
-        strRawContents = strRawContents.replace("\r", "");
-    var arrLines = strRawContents.split("\n");
-    alert("File " + datafile.src + " has " + arrLines.length + " lines");
-    for (var i = 0; i < arrLines.length; i++) {
-        var curLine = arrLines[i];
-        alert("Line #" + (i + 1) + " is: '" + curLine + "'");
-    }
+    var strContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strContents.indexOf("\r") >= 0)
+        strContents = strContents.replace("\r", "");
+    var lineArray = strContents.split("\n");
+    var dataArray = lineArray[0].split(",");
+    alert("Data" + dataArray);
+    // DEBUG: this code will show all lines in an alert box
+    //for (var i = 0; i < lineArray.length; i++) {
+    //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
+    //}
 }
 </script>
 
 </body>
 
 </html>
+
