@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
+<style> 
 
+img {
+  position: absolute;
+  z-index: -1;
+}    
+    
+</style>
 <body>
     <iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
     <p id="debug1">debug text</p>
     <p id="debug2">debug text</p>
     <p id="debug3">debug text</p>
 
+<img id="ParkingLot" width="95%" height="95%" src="file:///C:/Users/User/Pictures/smolparkinglot.png" alt="Parking Lot" style="border:2px solid #000000;">
+    
 <script type="text/javascript">
 var dataArray;
 
