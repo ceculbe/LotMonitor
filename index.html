@@ -27,7 +27,7 @@ function LoadFile() {
     var lineArray = strContents.split("\n");
     var dataArray = lineArray[0].split(",");
     document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + dataArray.length;
-    document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--" + dataArray[1] + "--" + dataArray[2] + "--" + dataArray[3] + "--" + dataArray[4] + "--" + dataArray[5] + "--";
+    document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--" + dataArray[1] + "--" + dataArray[2] + "--" + dataArray[3] + "--";
     var answer;
     if(dataArray[0] == 1){
         answer = "Yes.";
