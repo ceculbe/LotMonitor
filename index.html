@@ -6,7 +6,11 @@ img {
   position: absolute;
   z-index: -1;
 }    
-    
+image { 
+  z-index: 1;
+  width: 20%; 
+  height: 20%;
+}
 </style>
 <body>
     <iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
@@ -31,10 +35,10 @@ function LoadFile() {
     var answer;
     if(dataArray[0] == 1){
         answer = "Yes.";
-        <image src ="Green240.png" style="width:8%;height:30%;left:20%;top:11%">;
+        <image src ="Green240.png" style="left:50%;top:50%">;
     } else {
         answer = "No.";
-        <image src ="Red240.png" style="width:8%;height:30%;left:20%;top:11%">;
+        <image src ="Red240.png" style="left:50%;top:50%">;
     }
    if(dataArray[1] == 1){
         answer = "Yes.";
