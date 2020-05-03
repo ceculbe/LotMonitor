@@ -41,8 +41,7 @@ function LoadFile() {
     if(dataArray[0] == 1){
         answer = "Yes.";
       
-        var img=document.createElement('imggreen');
-        img.src='green.png';
+        
         img.onload = function () {
         var c=document.getElementById('myCanvas');
         var ctx=c.getContext('2d');
@@ -85,8 +84,11 @@ function LoadFile() {
   
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d"); 
-  
-  
+
+var img=document.createElement('imgred');
+img.src='red.png';
+var img=document.createElement('imggreen');
+img.src='green.png';
 var img=document.createElement('img');
 img.src='smolparkinglot.png';
 img.onload = function () {
