@@ -21,7 +21,7 @@ image {
     <p id="debug3">debug text</p>
 
 <canvas id="myCanvas" width="95%" height="95%" style="border:2px solid #000000;">
-  </canvas>
+</canvas>
   
   <img id="ParkingLot">
     
@@ -75,6 +75,10 @@ function LoadFile() {
     //for (var i = 0; i < lineArray.length; i++) {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
     //}
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d"); 
+  
+  
   window.onload = function() {
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
