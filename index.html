@@ -40,7 +40,7 @@ function LoadFile() {
     var answer;
     if(dataArray[0] == 1){
         answer = "Yes.";
-      image1 = new Image();
+      image1 = new Image(green1.png);
       image1.src = 'green.png';
       context.drawImage(image1, 100, 100);
       
@@ -85,11 +85,11 @@ function LoadFile() {
   
   
 var img=document.createElement('img');
-img.src='smolparkinglot.png' style=z-index=-1;
+img.src='smolparkinglot.png';
 img.onload = function () {
 var c=document.getElementById('myCanvas');
 var ctx=c.getContext('2d');
-ctx.drawImage(img,6,-26,792,498.6);
+ctx.drawImage(img,6,0,792,498.6);
 }
   
   
