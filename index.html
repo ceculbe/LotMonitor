@@ -20,7 +20,10 @@ image {
     <p id="debug2">debug text</p>
     <p id="debug3">debug text</p>
 
-<img id="ParkingLot" width="65%" height="65%" src="smolparkinglot.png" style="border:2px solid #000000;">
+<canvas id="myCanvas" width="95%" height="95%" style="border:2px solid #000000;">
+  </canvas>
+  
+  <img id="ParkingLot">
     
 <script type="text/javascript">
 var dataArray;
@@ -72,6 +75,12 @@ function LoadFile() {
     //for (var i = 0; i < lineArray.length; i++) {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
     //}
+  window.onload = function() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("ParkingLot");
+  ctx.drawImage(img, 10, 10);
+}
 }
 </script>
 
