@@ -81,11 +81,12 @@ function LoadFile() {
   var ctx = canvas.getContext("2d"); 
   
   
-  window.onload = function() {
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("ParkingLot");
-  context.drawImage(img,50%,50%,95%,95%);
+var img=document.createElement('img');
+img.src='smolparkinglot.png';
+img.onload = function () {
+var c=document.getElementById('myCanvas');
+var ctx=c.getContext('2d');
+ctx.drawImage(img,10,10,400,277);
 }
 </script>
 
