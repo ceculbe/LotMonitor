@@ -42,10 +42,7 @@ function LoadFile() {
         answer = "Yes.";
       
         
-        img.onload = function () {
-        var c=document.getElementById('myCanvas');
-        var ctx=c.getContext('2d');
-        ctx.drawImage(imggreen,6,0,792,498.6);
+       
     } else {
         answer = "No.";
         //<image id="Red" left="50%" top="50%" src="red.png" style="border:2px solid #000000;">
@@ -85,10 +82,7 @@ function LoadFile() {
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d"); 
 
-var img=document.createElement('imgred');
-img.src='red.png';
-var img=document.createElement('imggreen');
-img.src='green.png';
+
 var img=document.createElement('img');
 img.src='smolparkinglot.png';
 img.onload = function () {
