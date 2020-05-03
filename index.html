@@ -40,13 +40,10 @@ function LoadFile() {
     var answer;
     if(dataArray[0] == 1){
         answer = "Yes.";
+      image1 = new Image();
+      image1.src = 'green.png';
+      context.drawImage(image1, 100, 100);
       
-      var img=document.createElement('img');
-      img.src='green.png';
-      img.onload = function () {
-      var c=document.getElementById('myCanvas');
-      var ctx=c.getContext('2d');
-      ctx.drawImage(img,6,-26,);
     } else {
         answer = "No.";
         //<image id="Red" left="50%" top="50%" src="red.png" style="border:2px solid #000000;">
@@ -94,6 +91,8 @@ var c=document.getElementById('myCanvas');
 var ctx=c.getContext('2d');
 ctx.drawImage(img,6,-26,792,498.6);
 }
+  
+  
 </script>
 
 </body>
