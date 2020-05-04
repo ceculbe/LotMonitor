@@ -52,7 +52,15 @@ function LoadFile() {
         }
     } else {
         answer = "No.";
-        //<image id="Red" left="50%" top="50%" src="red.png" style="border:2px solid #000000;">
+         function drawOne(){
+          ctx.beginPath(); 
+          ctx.moveTo(50,0) 
+          ctx.lineTo(35,10);
+          ctx.lineTo(65,10);
+          ctx.lineTo(50.5,0);
+          ctx.fillStyle = "rgb(255,0,0)";
+          ctx.fill();
+          ctx.stroke();
     }
    if(dataArray[1] == 1){
         //image src="green.png";
