@@ -4,10 +4,10 @@
 
 img {
   position: absolute;
-  z-index: -1;
+  z-index: 2;
 }    
 image { 
-  z-index: 1;
+  z-index: 3;
   width: 20%; 
   height: 20%;
   top: 50%; 
@@ -20,7 +20,7 @@ image {
     <p id="debug2">debug text</p>
     <p id="debug3">debug text</p>
 
-<canvas id="myCanvas" width="800" height="500" style="border:2px solid #000000;">
+<canvas id="myCanvas" width="800" height="500" style="border:2px solid #000000;" background-src="smolparkinglot.png">
 </canvas>
   
   <img id="ParkingLot" scr="smolparkinglot.png" >
@@ -81,12 +81,7 @@ function LoadFile() {
   var ctx = canvas.getContext("2d"); 
   
   
-var img=document.createElement('img');
-img.src='smolparkinglot.png';
-img.onload = function () {
-var c=document.getElementById('myCanvas');
-var ctx=c.getContext('2d');
-ctx.drawImage(img,6,-26,792,498.6);
+
 }
 </script>
 
