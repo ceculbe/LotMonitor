@@ -23,9 +23,8 @@ image {
 <canvas id="myCanvas" width="800" height="500" style="border:2px solid #000000;">
 </canvas>
   
-  <img id="ParkingLot" scr="smolparkinglot.png" z-index=-1>
-    <img id="Green" scr="green.png" z-index=2 width="20%" height="20%">
-      
+  <img id="ParkingLot" scr="smolparkinglot.png" >
+    
 <script type="text/javascript">
 var dataArray;
 
@@ -41,10 +40,7 @@ function LoadFile() {
     var answer;
     if(dataArray[0] == 1){
         answer = "Yes.";
-      
-
-        
-       
+        //<image id="Green" left="50%" top="50%" src="green.png" style="border:2px solid #000000;">
     } else {
         answer = "No.";
         //<image id="Red" left="50%" top="50%" src="red.png" style="border:2px solid #000000;">
@@ -83,20 +79,20 @@ function LoadFile() {
   
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d"); 
-
-
+  
+  
 var img=document.createElement('img');
 img.src='smolparkinglot.png';
 img.onload = function () {
 var c=document.getElementById('myCanvas');
 var ctx=c.getContext('2d');
-ctx.drawImage(img,6,0,792,498.6);
+ctx.drawImage(img,6,-26,792,498.6);
 }
-  
-  
 </script>
 
 </body>
 
 </html>
+
+
 
