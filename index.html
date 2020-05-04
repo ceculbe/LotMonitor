@@ -21,7 +21,8 @@ image {
     <p id="debug2">debug text</p>
     <p id="debug3">debug text</p>
 
-<canvas id="canvas" width="800" height="500" style="background: url('smolparkinglot.png')">
+<canvas id="canvas" width="800" height="500" style="border:2px solid #000000;">
+
   Your browser does not support the canvas element.
 </canvas>
   
@@ -81,7 +82,7 @@ function LoadFile() {
 
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d"); 
-  drawBgImg()
+
   
 var img=document.createElement('img');
 img.src='smolparkinglot.png';
