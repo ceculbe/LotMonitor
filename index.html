@@ -29,15 +29,24 @@ image {
 var dataArray;
 
 function LoadFile() {
+  
     var datafile = document.getElementById("diskFile");
+  
     var strContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
+  
     while (strContents.indexOf("\r") >= 0)
+      
         strContents = strContents.replace("\r", "");
+  
     var lineArray = strContents.split("\n");
+  
     var dataArray = lineArray[0].split(",");
+  
     document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + dataArray.length;
+  
     document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--" + dataArray[1] + "--" + dataArray[2];
     var answer;
+  
     if(dataArray[0] == 1){
         answer = "Yes.";
         //<image id="Green" left="50%" top="50%" src="green.png" style="border:2px solid #000000;">
