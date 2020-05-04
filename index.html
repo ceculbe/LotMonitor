@@ -80,7 +80,105 @@ function LoadFile() {
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d"); 
   
+  <!DOCTYPE html>
+<html>
+<style> 
+
+img {
+  position: absolute;
+  z-index: -1;
+}    
+image { 
+  z-index: 1;
+  width: 20%; 
+  height: 20%;
+  top: 50%; 
+  left: 30%;
+}
+</style>
+<body>
+    <iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
+    <p id="debug1">debug text</p>
+    <p id="debug2">debug text</p>
+    <p id="debug3">debug text</p>
+
+<canvas id="myCanvas" width="800" height="500" style="border:2px solid #000000;">
+</canvas>
   
+  <img id="ParkingLot" scr="smolparkinglot.png" >
+    
+<script type="text/javascript">
+var dataArray;
+
+function LoadFile() {
+    var datafile = document.getElementById("diskFile");
+    var strContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
+    while (strContents.indexOf("\r") >= 0)
+        strContents = strContents.replace("\r", "");
+    var lineArray = strContents.split("\n");
+    var dataArray = lineArray[0].split(",");
+    document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + dataArray.length;
+    document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--" + dataArray[1] + "--" + dataArray[2];
+    var answer;
+    if(dataArray[0] == 1){
+        answer = "Yes.";
+        //<image id="Green" left="50%" top="50%" src="green.png" style="border:2px solid #000000;">
+    } else {
+        answer = "No.";
+        //<image id="Red" left="50%" top="50%" src="red.png" style="border:2px solid #000000;">
+    }
+   if(dataArray[1] == 1){
+        //image src="green.png";
+    } else {
+        //image src="red.png";
+    }
+   if(dataArray[2] == 1){
+        answer = "Yes.";
+    } else {
+        answer = "No.";
+    }
+   if(dataArray[3] == 1){
+        answer = "Yes.";
+    } else {
+        answer = "No.";
+    }
+   if(dataArray[4] == 1){
+        answer = "Yes.";
+    } else {
+        answer = "No.";
+    }
+   if(dataArray[5] == 1){
+        answer = "Yes.";
+    } else {
+        answer = "No.";
+    }
+    document.getElementById("debug3").innerHTML = "Is the first data item a 1? " + answer;
+    // DEBUG: this code will show all lines in an alert box
+    //for (var i = 0; i < lineArray.length; i++) {
+    //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
+    //}
+    }
+  
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d"); 
+  
+  
+var img=document.createElement('img');
+img.src='smolparkinglot.png';
+img.onload = function () {
+var c=document.getElementById('myCanvas');
+var ctx=c.getContext('2d');
+ctx.drawImage(img,6,-26,792,498.6);
+}
+</script>
+
+</body>
+
+</html>
+
+
+
+
 
 </script>
 
