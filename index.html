@@ -78,17 +78,18 @@ function LoadFile() {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
     //}
     }
-  function drawBgImg() {
-    let bgImg = new Image();
-    bgImg.src = 'smolparkinglot.png';
-    bgImg.onload = () => {
-        gCtx.drawImage(bgImg, 0, 0, gElCanvas.width, gElCanvas.height);
-    }
-}
+
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d"); 
   drawBgImg()
   
+var img=document.createElement('img');
+img.src='smolparkinglot.png';
+img.onload = function () {
+var c=document.getElementById('myCanvas');
+var ctx=c.getContext('2d');
+ctx.drawImage(img,6,-26,792,498.6);
+}
 
 
 </script>
