@@ -24,7 +24,8 @@ image {
 </canvas>
   
   <img id="ParkingLot" scr="smolparkinglot.png" >
-    
+    <img id="Green" scr="green.png">
+      
 <script type="text/javascript">
 var dataArray;
 
@@ -41,7 +42,10 @@ function LoadFile() {
     if(dataArray[0] == 1){
         answer = "Yes.";
       
-        
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("Green");
+        ctx.drawImage(img, 10, 10);
        
     } else {
         answer = "No.";
