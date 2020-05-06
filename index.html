@@ -40,28 +40,8 @@ function LoadFile() {
     var answer;
     if(dataArray[0] == 1){
         answer = "Yes.";
-       function drawOne(){
-          ctx.beginPath(); 
-          ctx.moveTo(50,0) 
-          ctx.lineTo(35,10);
-          ctx.lineTo(65,10);
-          ctx.lineTo(50.5,0);
-          ctx.fillStyle = "rgb(255,0,0)";
-          ctx.fill();
-          ctx.stroke();
-        }
     } else {
-        answer = "No.";
-         function drawOne(){
-          ctx.beginPath(); 
-          ctx.moveTo(50,0) 
-          ctx.lineTo(35,10);
-          ctx.lineTo(65,10);
-          ctx.lineTo(50.5,0);
-          ctx.fillStyle = "rgb(0,255,0)";
-          ctx.fill();
-          ctx.stroke();
-         }
+        answer = "No.";     
     }
    if(dataArray[1] == 1){
         //image src="green.png";
