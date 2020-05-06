@@ -1,105 +1,59 @@
 <!DOCTYPE html>
 <html>
-<style> 
-
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+h1 { 
+	text-align: center; 
+    font-size: 220%;
+}
+h2 { 
+	font-size: 170%;
+}
+p { 
+	font-size:120%; 
+}
 img {
-  position: absolute;
-  z-index: -1;
-}    
-image { 
-  z-index: 1;
-  width: 20%; 
-  height: 20%;
-  top: 50%; 
-  left: 30%;
+	position: absolute;
+  	left: 35%;
+  	top: 45%;
+  	z-index: -1;
 }
 </style>
+</head>
 <body>
-    <iframe id="diskFile" src="data.txt" onload="LoadFile();" style="display: none;"></iframe>
-    <p id="debug1">debug text</p>
-    <p id="debug2">debug text</p>
-    <p id="debug3">debug text</p>
+<ul>
+<a href="index.html">
+  <img src="hourglass.jpg" alt="" style="width:129px;height:250px;border:0;">
+</a>
+<li><a class="active" href="index.html">Home</a></li>
 
-<canvas id="myCanvas" width="800" height="500" style="border:2px solid #000000;">
-</canvas>
-  
-  <img id="ParkingLot" scr="smolparkinglot.png" >
-    
-<script type="text/javascript">
-var dataArray;
+<li><a href="solution.html">Solution</a></li>
 
-function LoadFile() {
-    var datafile = document.getElementById("diskFile");
-    var strContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
-    while (strContents.indexOf("\r") >= 0)
-        strContents = strContents.replace("\r", "");
-    var lineArray = strContents.split("\n");
-    var dataArray = lineArray[0].split(",");
-    document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + dataArray.length;
-    document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--" + dataArray[1] + "--" + dataArray[2];
-    var answer;
-    var answerone; 
-    var answertwo; 
-    var answerthree; 
-    var answerfour; 
-    var answerfive;
-    if(dataArray[0] == 1){
-        answer = "Yes.";
-        //<image id="Green" left="50%" top="50%" src="green.png" style="border:2px solid #000000;">
-    } else {
-        answer = "No.";
-        //<image id="Red" left="50%" top="50%" src="red.png" style="border:2px solid #000000;">
-    }
-   if(dataArray[1] == 1){
-        answerone = "Yes.";
-        //image src="green.png";
-    } else {
-        answerone = "No.";
-        //image src="red.png";
-    }
-   if(dataArray[2] == 1){
-        answertwo = "Yes.";
-    } else {
-        answertwo = "No.";
-    }
-   if(dataArray[3] == 1){
-        answerthree = "Yes.";
-    } else {
-        answerthree = "No.";
-    }
-   if(dataArray[4] == 1){
-        answerfour = "Yes.";
-    } else {
-        answerfour = "No.";
-    }
-   if(dataArray[5] == 1){
-        answerfive = "Yes.";
-    } else {
-        answerfive = "No.";
-    }
-    document.getElementById("debug3").innerHTML = "Is the first data item a 1? " + answer + "   " + "Is the second data item a 1? " + answerone+ "   " + "Is the third data item a 1? " + answertwo + "   " + "Is the fourth data item a 1? " + answerthree + "   " + "Is the fifth data item a 1? " + answerfour + "   " + "Is the sixth data item a 1? " + answerfive; 
-    // DEBUG: this code will show all lines in an alert box
-    //for (var i = 0; i < lineArray.length; i++) {
-    //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
-    //}
-    }
-  
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d"); 
-  
-  
-var img=document.createElement('img');
-img.src='smolparkinglot.png';
-img.onload = function () {
-var c=document.getElementById('myCanvas');
-var ctx=c.getContext('2d');
-ctx.drawImage(img,6,-26,792,498.6);
-}
-</script>
+<li><a href="aboutus.html">About Us</a></li>
+
+</ul>
+<h1>Home Page</h1> 
+<h2>Elevator Pitch</h2>
+<p>For years, drivers have been dissatisfied of finding an open parking spot only to find out that they have wasted 5 minutes driving in circles finding no open parking spot. And according to 
+<a href="https://www.telegraph.co.uk/news/2017/02/01/motorists-spend-four-days-year-looking-parking-space/" target="_blank">telegraph.co.uk/news</a> it takes "the average motorist 5.9 mins to spend looking for a space, adding up to a total of 90.5 hours - or four days - spent searching for a parking spot over the year." What if there was a way to tell whether a spot is open. With our app we will be able to show a grid view of the parking lot for what spots are open or filled.</p>
+
 
 </body>
 
-</html>
 
+
+
+
+
+
+
+
+<footer>
+  <p></p>
+  <p>Contact information: <a href="ojberar@ilstu.edu">ojberar@ilstu.edu</a>.</p>
+</footer>
+</html>
 
 
