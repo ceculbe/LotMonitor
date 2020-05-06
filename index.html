@@ -40,8 +40,10 @@ function LoadFile() {
     var answer;
     if(dataArray[0] == 1){
         answer = "Yes.";
+        //<image id="Green" left="50%" top="50%" src="green.png" style="border:2px solid #000000;">
     } else {
-        answer = "No.";     
+        answer = "No.";
+        //<image id="Red" left="50%" top="50%" src="red.png" style="border:2px solid #000000;">
     }
    if(dataArray[1] == 1){
         //image src="green.png";
@@ -77,7 +79,7 @@ function LoadFile() {
   
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d"); 
-  drawOne()
+  
   
 var img=document.createElement('img');
 img.src='smolparkinglot.png';
