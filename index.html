@@ -25,25 +25,39 @@ image {
   
   <img id="ParkingLot" scr="smolparkinglot.png" >
     
-<script type="text/javascript">
-var dataArray;
+<script type="text/javascript"> 
+  var dataArray;
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  var img=document.createElement('img');
 
-function LoadFile() {
-    var datafile = document.getElementById("diskFile");
-    var strContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
-    while (strContents.indexOf("\r") >= 0)
-        strContents = strContents.replace("\r", "");
-    var lineArray = strContents.split("\n");
-    var dataArray = lineArray[0].split(",");
-    document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + dataArray.length;
-    document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--" + dataArray[1] + "--" + dataArray[2];
-    var answer;
-    var answerone; 
-    var answertwo; 
-    var answerthree; 
-    var answerfour; 
-    var answerfive;
-    if(dataArray[0] == 1){
+  
+  
+  
+img.onload = function () {
+var c=document.getElementById('myCanvas');
+var ctx=c.getContext('2d');
+ctx.drawImage(img,6,-26,792,498.6);
+}
+  
+  
+  
+  function LoadFile() {
+    
+  var datafile = document.getElementById("diskFile");
+  var strContents = datafile.contentWindow.document.body.childNodes[0].innerHTML;
+  var lineArray = strContents.split("\n");
+  var dataArray = lineArray[0].split(",");
+  var answer;
+  var answerone; 
+  var answertwo; 
+  var answerthree; 
+  var answerfour; 
+  var answerfive;
+    
+  document.getElementById("debug1").innerHTML = "Array=" + lineArray + " of length: " + dataArray.length;
+  document.getElementById("debug2").innerHTML = "First three data items=" + dataArray[0] + "--" + dataArray[1] + "--" + dataArray[2];
+   if(dataArray[0] == 1){
         answer = "Yes.";
         //<image id="Green" left="50%" top="50%" src="green.png" style="border:2px solid #000000;">
     } else {
@@ -82,19 +96,14 @@ function LoadFile() {
     //for (var i = 0; i < lineArray.length; i++) {
     //    alert("Line #" + (i + 1) + " is: '" + lineArray[i] + "'");
     //}
-    }
-  
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d"); 
+    } 
   
   
-var img=document.createElement('img');
-img.src='smolparkinglot.png';
-img.onload = function () {
-var c=document.getElementById('myCanvas');
-var ctx=c.getContext('2d');
-ctx.drawImage(img,6,-26,792,498.6);
-}
+  
+  
+  
+  
+  
 </script>
 
 </body>
