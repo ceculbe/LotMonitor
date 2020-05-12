@@ -1,3 +1,6 @@
 Lot Monitor 
-
-This is a placeholder for the documentation for the LotMonitor project
+This is a project that uses a raspiberry pi with a camera, java, javascrpit and html.
+This is a proof concept for a parking lot monitor app. 
+The raspiberry pi takes a picture, then filters it through embose to make an edge detected photo.
+The java counts the white pixels in an area and outputs a 1 or 0 if there is an amount in the parking spot. 
+The java script and html would have taken the output and displayed a parkinglot 'map', but this was not finished.
